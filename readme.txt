@@ -14,3 +14,4 @@ WP Simple Feedback is a plugin for WordPress. With this plugin you are able to l
 === License ===
 
 GPLv3 by @dasllama and inpsyde.com
+
