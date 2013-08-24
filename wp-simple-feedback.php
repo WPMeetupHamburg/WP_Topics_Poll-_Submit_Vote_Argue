@@ -1,22 +1,25 @@
 <?php
 /**
- * Plugin Name:	WP Simple Feedback
- * Plugin URI:	http://feedback.lindewitz.de
- * Description:	This plugin provides a simple feedback possibility for the users
- * Version:		0.1
- * Author:		Inpsyde GmbH
- * Author URI:	http://inpsyde.com
+ * Plugin Name:	WP Topics Poll-Submit-Vote-Argue-Tool 
+ * Plugin URI:	http://hackathon.wpmeetup-hamburg.de
+ * Description:	This plugin provides a simple possibility to pubplish ideas and vote them
+ * Version:		0.0.1
+ * Author:		WP Meetup Hamburg Hackathon
+ * Author URI:	http://hackathon.wpmeetup-hamburg.de
  * Licence:		GPLv3
- * Text Domain:	wp-simple-feedback
+ * Text Domain:	wp-toppoll-tool
  * Domain Path:	/language
  */
 
-if ( ! class_exists( 'WP_Simple_Feedback' ) ) {
+// --- fo 2013-08-24 ---
+
+
+if ( ! class_exists( 'WP_TopPoll' ) ) {
 	
 	if ( function_exists( 'add_filter' ) )
-		add_filter( 'plugins_loaded' ,  array( 'WP_Simple_Feedback', 'get_instance' ) );
+		add_filter( 'plugins_loaded' ,  array( 'WP_TopPoll', 'get_instance' ) );
 	
-	class WP_Simple_Feedback {
+	class WP_TopPoll {
 		
 		/**
 		 * Instance holder
@@ -46,7 +49,7 @@ if ( ! class_exists( 'WP_Simple_Feedback' ) ) {
 		public function __construct () {
 			
 			// Translation
-			load_plugin_textdomain( 'wp-simple-feedback', FALSE, dirname( plugin_basename( __FILE__ ) ) . '/language' );
+			load_plugin_textdomain( 'wp-toppoll-tool', FALSE, dirname( plugin_basename( __FILE__ ) ) . '/language' );
 			
 			// Load the features
 			$this->load_features();

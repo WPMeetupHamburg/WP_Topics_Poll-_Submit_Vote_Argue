@@ -5,7 +5,7 @@ div.vote {
 }
 
 p.note {
-	color: #c09853;
+	color: #333;
 	background-color: #fcf8e3;
 	border: 1px solid #fbeed5;
 	padding: 8px 35px 8px 14px;
@@ -141,5 +141,8 @@ tr.undecided {
 tr.undecided a {
 	color: #3a87ad;
 }
+<<<<<<< HEAD
 
 /* That's all folks */
+=======
+>>>>>>> cc2cf662557a20860056aa4147f651f4ce6ba358
