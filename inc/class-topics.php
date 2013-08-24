@@ -135,7 +135,7 @@ if ( ! class_exists( 'WP_TopPoll_Topics' ) ) {
 		 */
 		public function register_topics_metaboxes() {
 			
-			add_meta_box( 'topic-ratings', __( 'Rating', 'wp-simple-feedback' ), array( $this, 'topic_metabox_rating' ), 'topics', 'side', 'high' );
+			add_meta_box( 'topic-ratings', __( 'Rating', 'wp-toppoll-tool' ), array( $this, 'topic_metabox_rating' ), 'topics', 'side', 'high' );
 		}
 		
 		/**
@@ -152,31 +152,31 @@ if ( ! class_exists( 'WP_TopPoll_Topics' ) ) {
 			?>
 			<table class="form-table">
 				<tr>
-					<th class="row-title"><label for="topic-rating-positive" class="left"><?php _e( 'Positive Rating', 'wp-simple-feedback' ); ?></label></th>
+					<th class="row-title"><label for="topic-rating-positive" class="left"><?php _e( 'Positive Rating', 'wp-toppoll-tool' ); ?></label></th>
 					<td>
 						<input type="text" name="topic-rating-positive" id="topic-rating-positive" size="12" value="<?php echo ! empty( $rating_positive ) ? esc_attr( $rating_positive ) : '0'; ?>" /><br />
 					</td>
 				</tr>
 				<tr>
-					<th class="row-title"><label for="topic-rating-negative" class="left"><?php _e( 'Negative Rating', 'wp-simple-feedback' ); ?></label></th>
+					<th class="row-title"><label for="topic-rating-negative" class="left"><?php _e( 'Negative Rating', 'wp-toppoll-tool' ); ?></label></th>
 					<td>
 						<input type="text" name="topic-rating-negative" id="topic-rating-positiv" size="12" value="<?php echo ! empty( $rating_negative ) ? esc_attr( $rating_negative ) : '0'; ?>" /><br />
 					</td>
 				</tr>
 				<tr>
-					<th class="row-title"><label for="topic-rating-abstinence" class="left"><?php _e( 'Abstinence Rating', 'wp-simple-feedback' ); ?></label></th>
+					<th class="row-title"><label for="topic-rating-abstinence" class="left"><?php _e( 'Abstinence Rating', 'wp-toppoll-tool' ); ?></label></th>
 					<td>
 						<input type="text" name="topic-rating-abstinence" id="topic-rating-abstinence" size="12" value="<?php echo ! empty( $rating_abstinence ) ? esc_attr( $rating_abstinence ) : '0'; ?>" /><br />
 					</td>
 				</tr>
 				<tr>
-					<th class="row-title"><label for="topic-status" class="left"><?php _e( 'Status', 'wp-simple-feedback' ); ?></label></th>
+					<th class="row-title"><label for="topic-status" class="left"><?php _e( 'Status', 'wp-toppoll-tool' ); ?></label></th>
 					<td>
 						<select name="topic-status" id="topic-status">
-							<option <?php echo selected( 'open', get_post_meta( $post->ID, 'topic-status', TRUE ) ); ?> value="open"><?php _e( 'Open', 'wp-simple-feedback' ); ?></option>
-							<option <?php echo selected( 'accepted', get_post_meta( $post->ID, 'topic-status', TRUE ) ); ?> value="accepted"><?php _e( 'Accepted', 'wp-simple-feedback' ); ?></option>
-							<option <?php echo selected( 'declined', get_post_meta( $post->ID, 'topic-status', TRUE ) ); ?> value="declined"><?php _e( 'Declined', 'wp-simple-feedback' ); ?></option>
-							<option <?php echo selected( 'undecided', get_post_meta( $post->ID, 'topic-status', TRUE ) ); ?> value="undecided"><?php _e( 'Undecided', 'wp-simple-feedback' ); ?></option>
+							<option <?php echo selected( 'open', get_post_meta( $post->ID, 'topic-status', TRUE ) ); ?> value="open"><?php _e( 'Open', 'wp-toppoll-tool' ); ?></option>
+							<option <?php echo selected( 'accepted', get_post_meta( $post->ID, 'topic-status', TRUE ) ); ?> value="accepted"><?php _e( 'Accepted', 'wp-toppoll-tool' ); ?></option>
+							<option <?php echo selected( 'declined', get_post_meta( $post->ID, 'topic-status', TRUE ) ); ?> value="declined"><?php _e( 'Declined', 'wp-toppoll-tool' ); ?></option>
+							<option <?php echo selected( 'undecided', get_post_meta( $post->ID, 'topic-status', TRUE ) ); ?> value="undecided"><?php _e( 'Undecided', 'wp-toppoll-tool' ); ?></option>
 						</select>
 					</td>
 				</tr>

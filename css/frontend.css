@@ -5,10 +5,13 @@ div.vote {
 }
 
 p.note {
-color: #666;
-padding: 8px 1px 8px 14px;
-margin-bottom: 20px;
-
+	color: #333;
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 20px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	border-radius: 4px;
 }
 
 p.note.accepted {
@@ -55,44 +58,43 @@ div.vote ul li {
 div.vote ul li.btn {
 	color: #fff;
 	font-weight: bold;
-	text-align: center;padding: 12px 0 12px 0;
+	text-align: center;
 }
 
 div.vote ul.for-it li.btn,
 div.vote.inactive ul.for-it li.btn:hover {
-	background: #ec7522;
-	
+	background: #468847;
 }
 
 div.vote ul.against li.btn,
 div.vote.inactive ul.against li.btn:hover{
-	background: #222;
+	background: #b94a48;
 }
 
 div.vote ul.undecided li.btn,
 div.vote.inactive ul.undecided li.btn:hover {
-	background: #666;
+	background: #3a87ad;
 }
 
 div.vote ul.for-it li.btn:hover {
 	cursor: pointer;
-	background: #ee853b;
+	background: #7dab7e;
 }
 
 div.vote ul.against li.btn:hover {
 	cursor: pointer;
-	background: #111;
+	background: #ce807f;
 }
 
 div.vote ul.undecided li.btn:hover {
 	cursor: pointer;
-	background: #555;
+	background: #75abc5;
 }
 
 div.vote ul li.usr {
 	padding: 10px;
-	background: #ccc;
-	border-bottom: 1px solid #888;
+	background: #feeacd;
+	border-bottom: 1px solid #f89406;
 }
 
 div.vote ul li.usr div.avatar {
@@ -106,6 +108,7 @@ div.vote ul li.usr div.name {
 
 div.vote.inactive ul li.btn,
 div.vote.inactive ul li.btn:hover {
+	opacity: 0.4;
 	cursor: default;
 }
 

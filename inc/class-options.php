@@ -42,7 +42,7 @@ if ( ! class_exists( 'WP_TopPoll_Options' ) ) {
 		
 		public function admin_menu() {
 			
-			add_submenu_page( 'edit.php?post_type=topics', __( 'Settings' ), __( 'Settings' ), 'manage_options', 'wp-simple-feedback-options', array( $this, 'options_page' ) );
+			add_submenu_page( 'edit.php?post_type=topics', __( 'Settings' ), __( 'Settings' ), 'manage_options', 'wp-toppoll-tool-options', array( $this, 'options_page' ) );
 		}
 		
 		public function options_page() {
@@ -76,7 +76,7 @@ if ( ! class_exists( 'WP_TopPoll_Options' ) ) {
 						<tbody>
 							<tr valign="top">
 								<th scope="row">
-									<label for="wpsf_redirect_url"><?php _e( 'Redirection', 'wp-simple-feedback' ); ?></label>
+									<label for="wpsf_redirect_url"><?php _e( 'Redirection', 'wp-toppoll-tool' ); ?></label>
 								</th>
 								<td>
 									<select name="wpsf_redirect_url" id="wpsf_redirect_url">
@@ -84,16 +84,16 @@ if ( ! class_exists( 'WP_TopPoll_Options' ) ) {
 											<option <?php echo selected( $page->ID, $redirect_page_id ); ?> value="<?php echo $page->ID ?>"><?php echo $page->post_title; ?></option>
 										<?php endforeach; ?>
 									</select><br />
-									<span class="description"><?php _e( 'Choose the page to where the user will be redirected if he head to the custom post type archive page. You should redirect him to the page, where the open topics are displayed.', 'wp-simple-feedback' ); ?></span>
+									<span class="description"><?php _e( 'Choose the page to where the user will be redirected if he head to the custom post type archive page. You should redirect him to the page, where the open topics are displayed.', 'wp-toppoll-tool' ); ?></span>
 								</td>
 							</tr>
 							<tr valign="top">
 								<th scope="row">
-									<label for="wpsf_expiration"><?php _e( 'Expiration Base', 'wp-simple-feedback' ); ?></label>
+									<label for="wpsf_expiration"><?php _e( 'Expiration Base', 'wp-toppoll-tool' ); ?></label>
 								</th>
 								<td>
 									<input type="number" step="1" min="1" name="wpsf_expiration" id="wpsf_expiration" value="<?php echo $expiration; ?>" class="small-text" /><br />
-									<span class="description"><?php _e( 'Set the main expiration time of the topics in days.', 'wp-simple-feedback' ); ?></span>
+									<span class="description"><?php _e( 'Set the main expiration time of the topics in days.', 'wp-toppoll-tool' ); ?></span>
 								</td>
 							</tr>
 						</tbody>
@@ -111,7 +111,7 @@ if ( ! class_exists( 'WP_TopPoll_Options' ) ) {
 			update_option( 'wpsf_expiration', $_POST[ 'wpsf_expiration' ] );
 			update_option( 'wpsf_redirect_url', $_POST[ 'wpsf_redirect_url' ] );
 			
-			wp_redirect( 'edit.php?post_type=topics&page=wp-simple-feedback-options&message=updated' );
+			wp_redirect( 'edit.php?post_type=topics&page=wp-toppoll-tool-options&message=updated' );
 		}
 	}
 	

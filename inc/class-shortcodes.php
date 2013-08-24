@@ -99,13 +99,13 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 			?>
 			<div class="vote <?php echo $class; ?>" topicid="<?php the_ID(); ?>">
 				<?php if ( $status == 'open' ) : ?>
-					<p class="note"><?php _e( '<strong>Important:</strong> This topic ends at ', 'wp-simple-feedback' ); ?> <?php echo $date_of_exp; ?></p>
+					<p class="note"><?php _e( '<strong>Important:</strong> This topic ends at ', 'wp-toppoll-tool' ); ?> <?php echo $date_of_exp; ?></p>
 				<?php else : ?>
-					<p class="note <?php echo $status; ?>"><?php _e( '<strong>Important:</strong> This vote ended and is ', 'wp-simple-feedback' ); ?> <strong><?php $status = ucfirst( $status ); _e( $status, 'wp-simple-feedback' ); ?></strong></p>
+					<p class="note <?php echo $status; ?>"><?php _e( '<strong>Important:</strong> This vote ended and is ', 'wp-toppoll-tool' ); ?> <strong><?php $status = ucfirst( $status ); _e( $status, 'wp-toppoll-tool' ); ?></strong></p>
 				<?php endif; ?>
 				<ul class="for-it">
 					<li class="btn">
-						<?php _e( 'For it', 'wp-simple-feedback' ); ?>
+						<?php _e( 'For it', 'wp-toppoll-tool' ); ?>
 						(<span class="cnt"><?php echo count( $users_for_it ); ?></span>)
 					</li>
 					<?php
@@ -122,7 +122,7 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 									if ( is_user_logged_in() )
 										echo $user_data->display_name;
 									else
-										_e( 'Anonym', 'wp-simple-feedback' );
+										_e( 'Anonym', 'wp-toppoll-tool' );
 								?>
 							</div>
 							<br class="clear">
@@ -133,7 +133,7 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 				</ul>
 				<ul class="undecided">
 					<li class="btn">
-						<?php _e( 'Undecided', 'wp-simple-feedback' ); ?>
+						<?php _e( 'Undecided', 'wp-toppoll-tool' ); ?>
 						(<span class="cnt"><?php echo count( $users_undecided ); ?></span>)
 					</li>
 					<?php
@@ -150,7 +150,7 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 									if ( is_user_logged_in() )
 										echo $user_data->display_name;
 									else
-										_e( 'Anonym', 'wp-simple-feedback' );
+										_e( 'Anonym', 'wp-toppoll-tool' );
 								?>
 							</div>
 							<br class="clear">
@@ -161,7 +161,7 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 				</ul>
 				<ul class="against">
 					<li class="btn">
-						<?php _e( 'Against', 'wp-simple-feedback' ); ?>
+						<?php _e( 'Against', 'wp-toppoll-tool' ); ?>
 						(<span class="cnt"><?php echo count( $users_against ); ?></span>)
 					</li>
 					<?php
@@ -178,7 +178,7 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 									if ( is_user_logged_in() )
 										echo $user_data->display_name;
 									else
-										_e( 'Anonym', 'wp-simple-feedback' );
+										_e( 'Anonym', 'wp-toppoll-tool' );
 								?>
 							</div>
 							<br class="clear">
@@ -215,9 +215,9 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 				<table>
 					<thead>
 						<tr>
-							<th style="width: 70%;"><?php _e( 'Topic', 'wp-simple-feedback' ); ?></th>
-							<th style="width: 15%;"><?php _e( 'Author', 'wp-simple-feedback' ); ?></th>
-							<th style="width: 15%;"><?php _e( 'Expiration', 'wp-simple-feedback' ); ?></th>
+							<th style="width: 70%;"><?php _e( 'Topic', 'wp-toppoll-tool' ); ?></th>
+							<th style="width: 15%;"><?php _e( 'Author', 'wp-toppoll-tool' ); ?></th>
+							<th style="width: 15%;"><?php _e( 'Expiration', 'wp-toppoll-tool' ); ?></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -239,7 +239,7 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 						if ( is_user_logged_in() )
 							the_author();
 						else
-							_e( 'Anonym', 'wp-simple-feedback' );
+							_e( 'Anonym', 'wp-toppoll-tool' );
 						?></td>
 						<td><?php echo $date_of_exp; ?></td>
 					</tr>
@@ -250,7 +250,7 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 				</table>
 				<?php
 			} else {
-				?><p><?php _e( 'Currently there are no open topics.', 'wp-simple-feedback' ) ?></p><?php
+				?><p><?php _e( 'Currently there are no open topics.', 'wp-toppoll-tool' ) ?></p><?php
 			}
 			wp_reset_postdata();
 			wp_reset_query();
@@ -285,9 +285,9 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 				<table>
 					<thead>
 						<tr>
-							<th style="width: 70%;"><?php _e( 'Topic', 'wp-simple-feedback' ); ?></th>
-							<th style="width: 15%;"><?php _e( 'Author', 'wp-simple-feedback' ); ?></th>
-							<th style="width: 15%;"><?php _e( 'Conclusion', 'wp-simple-feedback' ); ?></th>
+							<th style="width: 70%;"><?php _e( 'Topic', 'wp-toppoll-tool' ); ?></th>
+							<th style="width: 15%;"><?php _e( 'Author', 'wp-toppoll-tool' ); ?></th>
+							<th style="width: 15%;"><?php _e( 'Conclusion', 'wp-toppoll-tool' ); ?></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -304,9 +304,9 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 						if ( is_user_logged_in() )
 							the_author();
 						else
-							_e( 'Anonym', 'wp-simple-feedback' );
+							_e( 'Anonym', 'wp-toppoll-tool' );
 						?></td>
-						<td><strong><?php $status = ucfirst( $status ); _e( $status, 'wp-simple-feedback' ); ?></strong></td>
+						<td><strong><?php $status = ucfirst( $status ); _e( $status, 'wp-toppoll-tool' ); ?></strong></td>
 					</tr>
 					<?php
 				}
@@ -315,7 +315,7 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 				</table>
 				<?php
 			} else {
-				?><p><?php _e( 'Currently there are no closed topics.', 'wp-simple-feedback' ) ?></p><?php
+				?><p><?php _e( 'Currently there are no closed topics.', 'wp-toppoll-tool' ) ?></p><?php
 			}
 			wp_reset_postdata();
 			wp_reset_query();
