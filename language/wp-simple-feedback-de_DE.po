@@ -1,0 +1,248 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Simple Feedback v0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-03-18 18:36:12+0000\n"
+"Last-Translator: admin <ThomasHerzog85@gmx.at>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: inc/class-shortcodes.php:102
+#@ wp-simple-feedback
+msgid "<strong>Important:</strong> This topic ends at "
+msgstr "<strong>Wichtig:</strong> Dieses Thema wird abgeschlossen am: "
+
+#: inc/class-shortcodes.php:104
+#@ wp-simple-feedback
+msgid "<strong>Important:</strong> This vote ended and is "
+msgstr "<strong>Wichtig:</strong> Dieses Thema wurde beendet mit dem Status: "
+
+#: inc/class-shortcodes.php:108
+#@ wp-simple-feedback
+msgid "For it"
+msgstr "Dafür"
+
+#: inc/class-shortcodes.php:125
+#: inc/class-shortcodes.php:153
+#: inc/class-shortcodes.php:181
+#: inc/class-shortcodes.php:242
+#: inc/class-shortcodes.php:307
+#@ wp-simple-feedback
+msgid "Anonym"
+msgstr "Anonym"
+
+#: inc/class-shortcodes.php:136
+#: inc/class-topics.php:180
+#@ wp-simple-feedback
+msgid "Undecided"
+msgstr "Enthaltung"
+
+#: inc/class-shortcodes.php:164
+#@ wp-simple-feedback
+msgid "Against"
+msgstr "Dagegen"
+
+#: inc/class-shortcodes.php:218
+#: inc/class-shortcodes.php:288
+#: inc/class-topics.php:70
+#@ wp-simple-feedback
+msgid "Topic"
+msgstr "Thema"
+
+#: inc/class-shortcodes.php:219
+#: inc/class-shortcodes.php:289
+#: inc/class-topics.php:108
+#@ wp-simple-feedback
+#@ default
+msgid "Author"
+msgstr "Autor"
+
+#: inc/class-shortcodes.php:220
+#@ wp-simple-feedback
+msgid "Expiration"
+msgstr "Läuft ab am"
+
+#: inc/class-shortcodes.php:253
+#@ wp-simple-feedback
+msgid "Currently there are no open topics."
+msgstr "Aktuell gibt es keine offenen Themen."
+
+#: inc/class-shortcodes.php:290
+#@ wp-simple-feedback
+msgid "Conclusion"
+msgstr "Ergebnis"
+
+#: inc/class-shortcodes.php:318
+#@ wp-simple-feedback
+msgid "Currently there are no closed topics."
+msgstr "Aktuell gibt es keine geschlossenen Themen."
+
+#: inc/class-topics.php:60
+#: inc/class-topics.php:63
+#: inc/class-topics.php:67
+#@ wp-simple-feedback
+msgid "Topics"
+msgstr "Themen"
+
+#: inc/class-topics.php:61
+#: inc/class-topics.php:68
+#@ wp-simple-feedback
+msgid "Add Topic"
+msgstr "Thema hinzufügen"
+
+#: inc/class-topics.php:62
+#@ wp-simple-feedback
+msgid "New Topics"
+msgstr "Neues Thema"
+
+#: inc/class-topics.php:64
+#@ wp-simple-feedback
+msgid "Edit Topic"
+msgstr "Thema editieren"
+
+#: inc/class-topics.php:65
+#@ wp-simple-feedback
+msgid "View Topic"
+msgstr "Thema ansehen"
+
+#: inc/class-topics.php:66
+#: inc/class-topics.php:72
+#@ wp-simple-feedback
+msgid "There are no Topics matching the search criterias"
+msgstr "Unter diesen Suchbegriffen gibt es kein Thema"
+
+#: inc/class-topics.php:69
+#@ wp-simple-feedback
+msgid "Search Topics"
+msgstr "Durchsuche Themen"
+
+#: inc/class-topics.php:71
+#@ wp-simple-feedback
+msgid "Parent Topic"
+msgstr "Übergeordnetes Thema"
+
+#: inc/class-topics.php:139
+#@ wp-simple-feedback
+msgid "Rating"
+msgstr "Abstimmung"
+
+#: inc/class-topics.php:156
+#@ wp-simple-feedback
+msgid "Positive Rating"
+msgstr "Stimmen dafür"
+
+#: inc/class-topics.php:162
+#@ wp-simple-feedback
+msgid "Negative Rating"
+msgstr "Stimmen dagegen"
+
+#: inc/class-topics.php:168
+#@ wp-simple-feedback
+msgid "Abstinence Rating"
+msgstr "Enthaltungen"
+
+#: inc/class-topics.php:174
+#@ wp-simple-feedback
+msgid "Status"
+msgstr "Status"
+
+#: inc/class-topics.php:177
+#@ wp-simple-feedback
+msgid "Open"
+msgstr "Offen"
+
+#: inc/class-topics.php:178
+#@ wp-simple-feedback
+msgid "Accepted"
+msgstr "Angenommen"
+
+#: inc/class-topics.php:179
+#@ wp-simple-feedback
+msgid "Declined"
+msgstr "Abgelehnt"
+
+#. translators: plugin header field 'Name'
+#: wp-simple-feedback.php:0
+#@ wp-simple-feedback
+msgid "WP Simple Feedback"
+msgstr ""
+
+#. translators: plugin header field 'PluginURI'
+#: wp-simple-feedback.php:0
+#@ wp-simple-feedback
+msgid "http://feedback.lindewitz.de"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: wp-simple-feedback.php:0
+#@ wp-simple-feedback
+msgid "This plugin provides a simple feedback possibility for the users"
+msgstr ""
+
+#. translators: plugin header field 'Author'
+#: wp-simple-feedback.php:0
+#@ wp-simple-feedback
+msgid "Inpsyde GmbH"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: wp-simple-feedback.php:0
+#@ wp-simple-feedback
+msgid "http://inpsyde.com"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: wp-simple-feedback.php:0
+#@ wp-simple-feedback
+msgid "0.1"
+msgstr ""
+
+#: inc/class-options.php:45
+#: inc/class-options.php:62
+#@ default
+msgid "Settings"
+msgstr ""
+
+#: inc/class-options.php:68
+#@ default
+msgid "Settings saved."
+msgstr ""
+
+#: inc/class-options.php:79
+#@ wp-simple-feedback
+msgid "Redirection"
+msgstr "Umleitung"
+
+#: inc/class-options.php:87
+#@ wp-simple-feedback
+msgid "Choose the page to where the user will be redirected if he head to the custom post type archive page. You should redirect him to the page, where the open topics are displayed."
+msgstr "Wähle die Seite aus, wohin der Benutzer weiter geleitet wird, wenn er auf das Standard-Archiv des Custom Post Types kommt. Du solltest ihn zu der Seite weiterleiten, wo die offenen Themen angezeigt werden."
+
+#: inc/class-options.php:92
+#@ wp-simple-feedback
+msgid "Expiration Base"
+msgstr "Auslaufdatum"
+
+#: inc/class-options.php:96
+#@ wp-simple-feedback
+msgid "Set the main expiration time of the topics in days."
+msgstr "Setze hier die Ablaufzeit eines Themas in Tagen."
+
+#: inc/class-options.php:102
+#@ default
+msgid "Save Changes"
+msgstr ""
+

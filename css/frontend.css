@@ -1,0 +1,145 @@
+@CHARSET "UTF-8";
+
+div.vote {
+	width: 100%;
+}
+
+p.note {
+	color: #c09853;
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 20px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+p.note.accepted {
+	color: #468847;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+
+p.note.declined {
+	color: #b94a48;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+}
+
+p.note.undecided {
+	color: #3a87ad;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+
+div.vote ul {
+	margin: 0;
+	padding: 0;
+	width: 32%;
+	float: left;
+	list-style: none;
+	background: none;
+}
+
+div.vote ul.for-it,
+div.vote ul.undecided {
+	margin-right: 5px;
+}
+
+div.vote ul li:before {
+	background: none;
+}
+
+div.vote ul li {
+	margin: 0;
+	padding: 0;
+}
+
+div.vote ul li.btn {
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+
+div.vote ul.for-it li.btn,
+div.vote.inactive ul.for-it li.btn:hover {
+	background: #468847;
+}
+
+div.vote ul.against li.btn,
+div.vote.inactive ul.against li.btn:hover{
+	background: #b94a48;
+}
+
+div.vote ul.undecided li.btn,
+div.vote.inactive ul.undecided li.btn:hover {
+	background: #3a87ad;
+}
+
+div.vote ul.for-it li.btn:hover {
+	cursor: pointer;
+	background: #7dab7e;
+}
+
+div.vote ul.against li.btn:hover {
+	cursor: pointer;
+	background: #ce807f;
+}
+
+div.vote ul.undecided li.btn:hover {
+	cursor: pointer;
+	background: #75abc5;
+}
+
+div.vote ul li.usr {
+	padding: 10px;
+	background: #feeacd;
+	border-bottom: 1px solid #f89406;
+}
+
+div.vote ul li.usr div.avatar {
+	float: left;
+}
+
+div.vote ul li.usr div.name {
+	float: left;
+	margin-left: 5px;
+}
+
+div.vote.inactive ul li.btn,
+div.vote.inactive ul li.btn:hover {
+	opacity: 0.4;
+	cursor: default;
+}
+
+tr.accepted td:first-child,
+tr.declined td:first-child,
+tr.undecided td:first-child {
+	padding-left: 5px;
+}
+
+tr.accepted {
+	background: #dff0d8;
+}
+
+tr.accepted a {
+	color: #468847;
+}
+
+tr.declined {
+	background: #f2dede;
+}
+
+tr.declined a {
+	color: #b94a48;
+}
+
+tr.undecided {
+	background: #d9edf7;
+}
+
+tr.undecided a {
+	color: #3a87ad;
+}
