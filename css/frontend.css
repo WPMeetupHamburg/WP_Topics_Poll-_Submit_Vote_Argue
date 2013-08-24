@@ -63,32 +63,32 @@ div.vote ul li.btn {
 
 div.vote ul.for-it li.btn,
 div.vote.inactive ul.for-it li.btn:hover {
-	background: #468847;
+	background: #ec7522;
 }
 
 div.vote ul.against li.btn,
 div.vote.inactive ul.against li.btn:hover{
-	background: #b94a48;
+	background: #222;
 }
 
 div.vote ul.undecided li.btn,
 div.vote.inactive ul.undecided li.btn:hover {
-	background: #3a87ad;
+	background: #666;
 }
 
 div.vote ul.for-it li.btn:hover {
 	cursor: pointer;
-	background: #7dab7e;
+	background: #ee853b;
 }
 
 div.vote ul.against li.btn:hover {
 	cursor: pointer;
-	background: #ce807f;
+	background: #111;
 }
 
 div.vote ul.undecided li.btn:hover {
 	cursor: pointer;
-	background: #75abc5;
+	background: #555;
 }
 
 div.vote ul li.usr {
