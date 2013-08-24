@@ -106,7 +106,6 @@ div.vote ul li.usr div.name {
 
 div.vote.inactive ul li.btn,
 div.vote.inactive ul li.btn:hover {
-	opacity: 0.4;
 	cursor: default;
 }
 
