@@ -40,9 +40,21 @@ if ( ! class_exists( 'WP_TopPoll_Init' ) ) {
 				// Frontend Scripts
 				add_filter( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 				add_filter( 'wp_head', array( $this, 'wp_head' ) );
+                                add_filter( 'widget_comments_args', array( $this, 'fix_comment_widget' ));
 			}
 		}
 		
+                /**
+                 * Fix Comment Widget, list only comments
+                 * 
+                 * @param array $query_vars
+                 * @return array
+                 */
+                public function fix_comment_widget( $query_vars ) {
+                    $query_vars[ 'type' ] = 'comment';
+                    return $query_vars;
+                }
+                
 		public function redirect( $template ) {
 			
 			if ( get_post_type() == 'topics' && is_archive() ) {
