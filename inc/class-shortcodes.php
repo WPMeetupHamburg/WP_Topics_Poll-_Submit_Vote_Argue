@@ -3,9 +3,9 @@
  * Feature Name:	WP Simple Feedback Shortcode
  */
 
-if ( ! class_exists( 'WP_Simple_Feedback_Shortcode' ) ) {
+if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 
-	class WP_Simple_Feedback_Shortcode extends WP_Simple_Feedback {
+	class WP_TopPoll_Shortcode extends WP_TopPoll {
 		
 		/**
 		 * Instance holder
@@ -329,5 +329,5 @@ if ( ! class_exists( 'WP_Simple_Feedback_Shortcode' ) ) {
 	
 	// Kickoff
 	if ( function_exists( 'add_filter' ) )
-		WP_Simple_Feedback_Shortcode::get_instance();
+		WP_TopPoll_Shortcode::get_instance();
 }

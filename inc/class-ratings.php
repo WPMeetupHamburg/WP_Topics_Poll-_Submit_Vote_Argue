@@ -3,21 +3,21 @@
  * Feature Name:	WP Simple Feedback Ratings
  */
 
-if ( ! class_exists( 'WP_Simple_Feedback_Ratings' ) ) {
+if ( ! class_exists( 'WP_TopPoll_Ratings' ) ) {
 
-	class WP_Simple_Feedback_Ratings extends WP_Simple_Feedback {
+	class WP_TopPoll_Ratings extends WP_TopPoll {
 		
 		/**
 		 * Instance holder
 		 *
-		 * @var		NULL | WP_Simple_Feedback_Ratings
+		 * @var		NULL | WP_TopPoll_Ratings
 		 */
 		private static $instance = NULL;
 		
 		/**
 		 * Method for ensuring that only one instance of this object is used
 		 *
-		 * @return	WP_Simple_Feedback_Ratings
+		 * @return	WP_TopPoll_Ratings
 		 */
 		public static function get_instance() {
 			
@@ -144,5 +144,5 @@ if ( ! class_exists( 'WP_Simple_Feedback_Ratings' ) ) {
 	
 	// Kickoff
 	if ( function_exists( 'add_filter' ) )
-		WP_Simple_Feedback_Ratings::get_instance();
+		WP_TopPoll_Ratings::get_instance();
 }

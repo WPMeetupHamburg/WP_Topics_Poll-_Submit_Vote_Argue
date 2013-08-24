@@ -3,9 +3,9 @@
  * Feature Name:	Init
  */
 
-if ( ! class_exists( 'WP_Simple_Feedback_Init' ) ) {
+if ( ! class_exists( 'WP_TopPoll_Init' ) ) {
 
-	class WP_Simple_Feedback_Init extends WP_Simple_Feedback {
+	class WP_TopPoll_Init extends WP_TopPoll {
 		
 		/**
 		 * Instance holder
@@ -74,14 +74,14 @@ if ( ! class_exists( 'WP_Simple_Feedback_Init' ) ) {
 		 */
 		public function enqueue_scripts () {
 			// Style
-			wp_enqueue_style( 'WP_Simple_Feedback', plugin_dir_url( __FILE__ ) . '../css/frontend.css' );
+			wp_enqueue_style( 'WP_TopPoll', plugin_dir_url( __FILE__ ) . '../css/frontend.css' );
 		
 			// Script
-			wp_enqueue_script( 'WP_Simple_Feedback_Frontend', plugin_dir_url( __FILE__ ) . '../js/frontend.js', array( 'jquery' ) );
+			wp_enqueue_script( 'WP_TopPoll_Frontend', plugin_dir_url( __FILE__ ) . '../js/frontend.js', array( 'jquery' ) );
 		}
 	}
 	
 	// Kickoff
 	if ( function_exists( 'add_filter' ) )
-		WP_Simple_Feedback_Init::get_instance();
+		WP_TopPoll_Init::get_instance();
 }

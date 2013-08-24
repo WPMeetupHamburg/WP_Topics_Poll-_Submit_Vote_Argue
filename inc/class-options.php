@@ -3,9 +3,9 @@
  * Feature Name:	Options
  */
 
-if ( ! class_exists( 'WP_Simple_Feedback_Options' ) ) {
+if ( ! class_exists( 'WP_TopPoll_Options' ) ) {
 
-	class WP_Simple_Feedback_Options extends WP_Simple_Feedback {
+	class WP_TopPoll_Options extends WP_TopPoll {
 		
 		/**
 		 * Instance holder
@@ -33,7 +33,7 @@ if ( ! class_exists( 'WP_Simple_Feedback_Options' ) ) {
 		 */
 		public function __construct () {
 			
-			if ( ! is_admin )
+			if ( ! is_admin() )
 				return;
 			
 			add_filter( 'admin_menu', array( $this, 'admin_menu' ) );
@@ -117,5 +117,5 @@ if ( ! class_exists( 'WP_Simple_Feedback_Options' ) ) {
 	
 	// Kickoff
 	if ( function_exists( 'add_filter' ) )
-		WP_Simple_Feedback_Options::get_instance();
+		WP_TopPoll_Options::get_instance();
 }
