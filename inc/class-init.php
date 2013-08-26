@@ -57,7 +57,7 @@ if ( ! class_exists( 'WP_TopPoll_Init' ) ) {
                 
 		public function redirect( $template ) {
 			
-			if ( get_post_type() == 'topics' && is_archive() ) {
+			if ( get_post_type() == 'topicpoll' && is_archive() ) {
 				
 				$redirect_page_id = get_option( 'wpsf_redirect_url' );
 				if ( $redirect_page_id == '' )

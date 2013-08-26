@@ -41,7 +41,7 @@ if ( ! class_exists( 'WP_TopPoll_Topics' ) ) {
 			add_filter( 'save_post', array( $this, 'save_meta_data' ) );
 			
 			// Custom Columns
-			if ( 'edit.php' == $pagenow && 'topics' == $_GET[ 'post_type' ] ) {
+			if ( 'edit.php' == $pagenow && 'topicpoll' == $_GET[ 'post_type' ] ) {
 				
 				// Normal Columns
 				add_filter( 'manage_edit-topics_columns', array( $this, 'custom_column_head' ) );
@@ -54,44 +54,47 @@ if ( ! class_exists( 'WP_TopPoll_Topics' ) ) {
 		 *
 		 * @return	void
 		 */
-		public function init_post_type() {
+	public function init_post_type() {
 				
 			$labels = array(
-				'name'                => _x( 'Voting-Instances', 'Post Type General Name', 'wp-toppoll-tool' ),
-				'singular_name'       => _x( 'Voting-Instance', 'Post Type Singular Name', 'wp-toppoll-tool' ),
-				'menu_name'           => __( 'Umfrage', 'wp-toppoll-tool' ),
-				'parent_item_colon'   => __( 'Parent Product:', 'wp-toppoll-tool' ),
-				'all_items'           => __( 'Alle Umfragen', 'wp-toppoll-tool' ),
-				'view_item'           => __( 'Zeige Umfragen', 'wp-toppoll-tool' ),
-				'add_new_item'        => __( 'Neue Umfrage anlegen', 'wp-toppoll-tool' ),
-				'add_new'             => __( 'Neue Umfrage anlegen', 'wp-toppoll-tool' ),
-				'edit_item'           => __( 'Umfrage ändern', 'wp-toppoll-tool' ),
-				'update_item'         => __( 'Umfrage aktualisieren', 'wp-toppoll-tool' ),
-				'search_items'        => __( 'Suche Umfrage', 'wp-toppoll-tool' ),
-				'not_found'           => __( 'Keine Umfrage vorhanden', 'wp-toppoll-tool' ),
-				'not_found_in_trash'  => __( 'Keine Umfrage vorhanden', 'wp-toppoll-tool' ),
+				'name'					=> __( 'Topics', 'wp-simple-feedback' ),
+				'add_new'				=> __( 'Add Topic', 'wp-simple-feedback' ),
+				'new_item'				=> __( 'New Topics', 'wp-simple-feedback' ),
+				'all_items'				=> __( 'Topics', 'wp-simple-feedback' ),
+				'edit_item'				=> __( 'Edit Topic', 'wp-simple-feedback' ),
+				'view_item'				=> __( 'View Topic', 'wp-simple-feedback' ),
+				'not_found'				=> __( 'There are no Topics matching the search criterias', 'wp-simple-feedback' ),
+				'menu_name'				=> __( 'Topics', 'wp-simple-feedback' ),
+				'add_new_item'			=> __( 'Add Topic', 'wp-simple-feedback' ),
+				'search_items'			=> __( 'Search Topics', 'wp-simple-feedback' ),
+				'singular_name'			=> __( 'Topic', 'wp-simple-feedback' ),
+				'parent_item_colon'		=> __( 'Parent Topic', 'wp-simple-feedback' ),
+				'not_found_in_trash'	=> __( 'There are no Topics matching the search criterias', 'wp-simple-feedback' ),
 			);
-			$args = array(
-				'label'               => __( 'topicpoll', 'wp-toppoll-tool' ),
-				'description'         => __( 'Topic-Poll-Submit-Voting-Instance', 'wp-toppoll-tool' ),
-				'labels'              => $labels,
-				'supports'            => array( 'title', 'author', 'comments', 'custom-fields', ),
-				'taxonomies'          => array( 'category', 'post_tag' ),
-				'hierarchical'        => false,
-				'public'              => true,
-				'show_ui'             => true,
-				'show_in_menu'        => false,
-				'show_in_nav_menus'   => true,
-				'show_in_admin_bar'   => true,
-				'menu_position'       => 5,
-				'menu_icon'           => '',
-				'can_export'          => true,
-				'has_archive'         => true,
-				'exclude_from_search' => false,
-				'publicly_queryable'  => true,
-				'capability_type'     => 'page',
+				
+			$supports = array(
+				'title',
+				'editor',
+				'thumbnail',
+				'comments'
 			);
-			register_post_type( 'topicpoll', $args );
+				
+			$post_type_args = array(
+				'public' 				=> TRUE,
+				'labels'				=> $labels,
+				'rewrite'				=> TRUE,
+				'show_ui' 				=> TRUE, 
+				'supports' 				=> $supports,
+				'query_var' 			=> TRUE,
+				'has_archive'			=> TRUE,
+				'hierarchical' 			=> FALSE,
+				'menu_position' 		=> NULL,
+				'capability_type' 		=> 'post',
+				'publicly_queryable'	=> TRUE,
+				'register_meta_box_cb'	=> array( $this, 'register_topics_metaboxes' ),
+			);
+				
+			register_post_type( 'topicpoll', $post_type_args );
 				
 		}
 		
@@ -135,7 +138,7 @@ if ( ! class_exists( 'WP_TopPoll_Topics' ) ) {
 		 */
 		public function register_topics_metaboxes() {
 			
-			add_meta_box( 'topic-ratings', __( 'Rating', 'wp-toppoll-tool' ), array( $this, 'topic_metabox_rating' ), 'topics', 'side', 'high' );
+			add_meta_box( 'topic-ratings', __( 'Rating', 'wp-toppoll-tool' ), array( $this, 'topic_metabox_rating' ), 'topicpoll', 'side', 'high' );
 		}
 		
 		/**
@@ -201,7 +204,7 @@ if ( ! class_exists( 'WP_TopPoll_Topics' ) ) {
 				return;
 		
 			// Do we have a ticker post
-			if ( ! isset( $_POST[ 'post_type' ] ) || 'topics' != $_POST[ 'post_type' ] )
+			if ( ! isset( $_POST[ 'post_type' ] ) || 'topicpoll' != $_POST[ 'post_type' ] )
 				return;
 		
 			// Check permissions

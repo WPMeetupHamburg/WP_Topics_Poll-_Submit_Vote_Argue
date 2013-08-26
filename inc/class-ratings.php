@@ -102,7 +102,7 @@ if ( ! class_exists( 'WP_TopPoll_Ratings' ) ) {
 			
 			$topics = get_posts(
 				array(
-					'post_type'			=> 'topics',
+					'post_type'			=> 'topicpoll',
 					'post_status'		=> 'published',
 					'meta_key'			=> 'topic-status',
 					'meta_value'		=> 'open',

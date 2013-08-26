@@ -42,7 +42,7 @@ if ( ! class_exists( 'WP_TopPoll_Options' ) ) {
 		
 		public function admin_menu() {
 			
-			add_submenu_page( 'edit.php?post_type=topics', __( 'Settings' ), __( 'Settings' ), 'manage_options', 'wp-toppoll-tool-options', array( $this, 'options_page' ) );
+			add_submenu_page( 'edit.php?post_type=topicpoll', __( 'Settings' ), __( 'Settings' ), 'manage_options', 'wp-toppoll-tool-options', array( $this, 'options_page' ) );
 		}
 		
 		public function options_page() {
@@ -111,7 +111,7 @@ if ( ! class_exists( 'WP_TopPoll_Options' ) ) {
 			update_option( 'wpsf_expiration', $_POST[ 'wpsf_expiration' ] );
 			update_option( 'wpsf_redirect_url', $_POST[ 'wpsf_redirect_url' ] );
 			
-			wp_redirect( 'edit.php?post_type=topics&page=wp-toppoll-tool-options&message=updated' );
+			wp_redirect( 'edit.php?post_type=topicpoll&page=wp-toppoll-tool-options&message=updated' );
 		}
 	}
 	

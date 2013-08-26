@@ -41,7 +41,7 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 		public function the_content( $content ) {
 			
 			// Return if post type is topic
-			if ( get_post_type() != 'topics' )
+			if ( get_post_type() != 'topicpoll' )
 				return $content;
 			if ( ! is_single() && get_post_type() == 'topics' )
 				return $content;
@@ -200,7 +200,7 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 			
 			$topics = new WP_Query(
 				array(
-					'post_type'			=> 'topics',
+					'post_type'			=> 'topicpoll',
 					'post_status'		=> 'published',
 					'meta_key'			=> 'topic-status',
 					'meta_value'		=> 'open',
@@ -265,7 +265,7 @@ if ( ! class_exists( 'WP_TopPoll_Shortcode' ) ) {
 			
 			$topics = new WP_Query(
 				array(
-					'post_type'			=> 'topics',
+					'post_type'			=> 'topicpoll',
 					'post_status'		=> 'published',
 					'meta_query'		=> array(
 						array(
